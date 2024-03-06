@@ -7,6 +7,8 @@ import face_recognition
 DEFAULT_ENCODINGS_PATH = Path("output/encodings.pkl")
 
 """
+
+IMPORTANT: UN-COMMENT THE FOLLOWING CODE TO MAKE RELEVANT DIRECTORIES
 Creates Directories
 
 Path("training").mkdir(exist_ok=True)
@@ -31,5 +33,5 @@ def encode_known_faces(model: str = "hog", encodings_location: Path = DEFAULT_EN
         face_encodings = face_recognition.face_encodings(image, face_locations)
 
         for encoding in face_encodings:
-            name.append(name)
+            names.append(name)
             encodings.append(encoding)
